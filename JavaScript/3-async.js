@@ -1,6 +1,6 @@
 'use strict';
 
-function fn2(a, b, callback) {
+function sum(a, b, callback) {
   if (typeof(a) === 'number' && typeof(b) === 'number') {
     callback(null, a + b);
   } else {
@@ -8,7 +8,7 @@ function fn2(a, b, callback) {
   }
 }
 
-fn2(2, 3, (err, result) => {
+sum(2, 3, (err, result) => {
   if (err) {
     console.log(err.message);
     return;
@@ -16,7 +16,7 @@ fn2(2, 3, (err, result) => {
   console.log(result);
 });
 
-fn2(7, 'A', (err, result) => {
+sum(7, 'A', (err, result) => {
   if (err) {
     console.log(err.message);
     return;
