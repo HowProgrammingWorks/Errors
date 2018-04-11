@@ -1,12 +1,12 @@
 'use strict';
 
-function sum(a, b, callback) {
+const sum = (a, b, callback) => {
   if (typeof(a) === 'number' && typeof(b) === 'number') {
     callback(null, a + b);
   } else {
     callback(new Error('a and b should be numbers'));
   }
-}
+};
 
 sum(2, 3, (err, result) => {
   if (err) {
