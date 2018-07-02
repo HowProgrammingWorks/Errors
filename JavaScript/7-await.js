@@ -4,7 +4,7 @@ const sum = async (a, b) => {
   if (typeof(a) === 'number' && typeof(b) === 'number') {
     return a + b;
   } else {
-    return Promise.reject(new Error('a and b should be numbers'));
+    throw new Error('a and b should be numbers');
   }
 };
 
