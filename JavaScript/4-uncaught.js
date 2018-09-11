@@ -1,7 +1,7 @@
 'use strict';
 
-process.on('uncaughtException', (e) => {
-  console.log('on uncaughtException: ' + e.message);
+process.on('uncaughtException', err => {
+  console.log('on uncaughtException: ' + err.message);
 });
 
 const sum = (a, b) => {
