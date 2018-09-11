@@ -5,7 +5,7 @@ process.on('uncaughtException', err => {
 });
 
 const sum = (a, b) => {
-  if (typeof(a) === 'number' && typeof(b) === 'number') {
+  if (typeof a === 'number' && typeof b === 'number') {
     return a + b;
   } else {
     throw new Error('a and b should be numbers');

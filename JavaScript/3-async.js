@@ -1,7 +1,7 @@
 'use strict';
 
 const sum = (a, b, callback) => {
-  if (typeof(a) === 'number' && typeof(b) === 'number') {
+  if (typeof a === 'number' && typeof b === 'number') {
     callback(null, a + b);
   } else {
     callback(new Error('a and b should be numbers'));
