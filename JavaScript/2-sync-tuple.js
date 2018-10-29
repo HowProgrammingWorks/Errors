@@ -9,4 +9,5 @@ const sum = (a, b) => {
 };
 
 console.log(sum(2, 3));
+
 console.log(sum(7, 'A'));

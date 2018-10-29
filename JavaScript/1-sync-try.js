@@ -19,3 +19,7 @@ try {
 } catch (err) {
   console.log(err.message);
 }
+
+console.log(sum(7, 'A'));
+
+console.log('Not executed');

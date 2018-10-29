@@ -23,3 +23,16 @@ sum(7, 'A')
   .catch(err => {
     console.log(err.message);
   });
+
+/*
+sum(7, 'A')
+  .then(data => {
+    console.log(data);
+  });
+
+UnhandledPromiseRejectionWarning: Error: a and b should be numbers
+
+DeprecationWarning: Unhandled promise rejections are deprecated.
+In the future, promise rejections that are not handled will terminate
+the Node.js process with a non-zero exit code.
+*/
