@@ -9,18 +9,18 @@ const sum = (a, b) => new Promise((resolve, reject) => {
 });
 
 sum(2, 3)
-  .then(data => {
+  .then((data) => {
     console.log(data);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err.message);
   });
 
 sum(7, 'A')
-  .then(data => {
+  .then((data) => {
     console.log(data);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err.message);
   });
 

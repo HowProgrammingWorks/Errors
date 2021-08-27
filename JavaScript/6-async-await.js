@@ -22,14 +22,13 @@ const sum = async (a, b) => {
     console.log(err.message);
   }
 
-/*
+  /*
   console.log(await sum(7, 'A'));
 
-UnhandledPromiseRejectionWarning: Error: a and b should be numbers
+  UnhandledPromiseRejectionWarning: Error: a and b should be numbers
 
-DeprecationWarning: Unhandled promise rejections are deprecated.
-In the future, promise rejections that are not handled will terminate
-the Node.js process with a non-zero exit code.
-*/
-
+  DeprecationWarning: Unhandled promise rejections are deprecated.
+  In the future, promise rejections that are not handled will terminate
+  the Node.js process with a non-zero exit code.
+  */
 })();
