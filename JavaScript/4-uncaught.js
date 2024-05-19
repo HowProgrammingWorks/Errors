@@ -12,5 +12,16 @@ const sum = (a, b) => {
   throw new Error('a and b should be numbers');
 };
 
-console.log(sum(2, 3));
-console.log(sum(7, 'A'));
+{
+  const x = 2;
+  const y = 3;
+  const total = sum(x, y);
+  console.log({ x, y, total });
+}
+
+{
+  const z = 7;
+  const c = 'A';
+  const res = sum(z, c);
+  console.log({ z, c, res });
+}

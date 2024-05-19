@@ -8,18 +8,22 @@ const sum = (a, b, callback) => {
   }
 };
 
-sum(2, 3, (err, result) => {
+const x = 2;
+const y = 3;
+sum(x, y, (err, total) => {
   if (err) {
-    console.log(err.message);
+    console.error({ x, y, err });
     return;
   }
-  console.log(result);
+  console.log({ x, y, total });
 });
 
-sum(7, 'A', (err, result) => {
+const z = 7;
+const c = 'A';
+sum(z, c, (err, res) => {
   if (err) {
-    console.log(err.message);
+    console.error({ z, c, err });
     return;
   }
-  console.log(result);
+  console.log({ z, c, res });
 });

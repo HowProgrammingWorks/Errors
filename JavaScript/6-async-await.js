@@ -9,20 +9,27 @@ const sum = async (a, b) => {
 
 (async () => {
 
+  const x = 2;
+  const y = 3;
   try {
-    console.log(await sum(2, 3));
-  } catch (e) {
-    console.log(e.message);
+    const total = await sum(x, y);
+    console.log({ x, y, total });
+  } catch (err) {
+    console.error({ x, y, err });
   }
 
+  const z = 7;
+  const c = 'A';
   try {
-    console.log(await sum(7, 'A'));
+    const res = await sum(z, c);
+    console.log({ z, c, res });
   } catch (err) {
-    console.log(err.message);
+    console.error({ z, c, err });
   }
 
   /*
-  console.log(await sum(7, 'A'));
+  const res = await sum(z, c);
+  console.log({ z, c, res });
 
   UnhandledPromiseRejectionWarning: Error: a and b should be numbers
 
@@ -30,4 +37,5 @@ const sum = async (a, b) => {
   In the future, promise rejections that are not handled will terminate
   the Node.js process with a non-zero exit code.
   */
+
 })();

@@ -1,33 +1,37 @@
 'use strict';
 
-const sum = (a, b) => new Promise((resolve, reject) => {
+const sum = (a, b) => new Promise((totalolve, reject) => {
   if (typeof a === 'number' && typeof b === 'number') {
-    resolve(a + b);
+    totalolve(a + b);
   } else {
     reject(new Error('a and b should be numbers'));
   }
 });
 
-sum(2, 3)
-  .then((data) => {
-    console.log(data);
+const x = 2;
+const y = 3;
+sum(x, y)
+  .then((total) => {
+    console.log({ x, y, total });
   })
   .catch((err) => {
-    console.log(err.message);
+    console.error({ x, y, err });
   });
 
-sum(7, 'A')
-  .then((data) => {
-    console.log(data);
+const z = 7;
+const c = 'A';
+sum(z, c)
+  .then((res) => {
+    console.log({ z, c, res });
   })
   .catch((err) => {
-    console.log(err.message);
+    console.log({ z, c, err });
   });
 
 /*
-sum(7, 'A')
-  .then(data => {
-    console.log(data);
+sum(z, c)
+  .then((res) => {
+    console.log({ z, c, res });
   });
 
 UnhandledPromiseRejectionWarning: Error: a and b should be numbers
