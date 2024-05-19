@@ -7,18 +7,20 @@ const sum = (a, b) => {
   throw new Error('a and b should be numbers');
 };
 
+const x = 2;
+const y = 3;
 try {
-  console.log(sum(2, 3));
+  const total = sum(x, y);
+  console.log({ x, y, total });
 } catch (err) {
-  console.log(err.message);
+  console.error({ x, y, err });
 }
 
+const z = 7;
+const c = 'A';
 try {
-  console.log(sum(7, 'A'));
+  const res = sum(z, c);
+  console.log({ z, c, res });
 } catch (err) {
-  console.log(err.message);
+  console.error({ z, c, err });
 }
-
-console.log(sum(7, 'A'));
-
-console.log('Not executed');
